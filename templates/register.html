@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <form action="{% url 'register_user' %}" method="post" style="margin: 5rem; padding: 2rem; font-size: 3rem;"  enctype='multipart/form-data'>
+        {% csrf_token %}
+        <label for="firstname">First Name :</label>
+        <input type="text" name="firstname" id="firstname"> <br>
+        <label for="lastname">Last Name :</label>
+        <input type="text" name="lastname" id="lastname"> <br>
+        <label for="fathername">Father's Name :</label>
+        <input type="text" name="fathername" id="fathername"> <br>
+        <label for="mothername">Mother's Name :</label>
+        <input type="text" name="mothername" id="mothername"> <br>
+        <label for="dob">Date of Birth :</label>
+        <input type="text" name="dob" id="dob"> <br>
+        <label for="address">Address :</label>
+        <input type="text" name="address" id="address"> <br>
+        <label for="gender">Gender :</label>
+        <input type="text" name="gender" id="gender"> <br>
+        <label for="mobile">Mobile Number :</label>
+        <input type="text" name="mobile" id="mobile"> <br>
+        <label for="image">Image :</label>
+        <input type="file" name="image" id="image"> <br>
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email"> <br>
+        <label for="password">Password :</label>
+        <input type="password" name="password" id="password"> <br>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
