@@ -44,7 +44,7 @@ ROOT_URLCONF = 'Authentication_System.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, "templates")],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -115,9 +115,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Handaling Media Files
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-# # Handaling Static Files
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, "static")
-# ]
+MEDIA_ROOT = BASE_DIR / 'media'
